@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Aladin&family=Manrope:wght@800&family=Open+Sans:wght@300&family=Orbitron:wght@800&family=Pacifico&family=Poppins:wght@800&display=swap");
+
+:root {
+  --color-dark-blue: hsl(218, 23%, 16%);
+  --color-dark-grayish-blue: hsl(217, 19%, 24%);
+  --color-neon-green: hsl(150, 100%, 66%);
+  --color-light-cyan: hsl(193, 38%, 86%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+.container {
+  background: var(--color-dark-blue);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__card {
+  width: 520px;
+  height: 300px;
+  background-color: var(--color-dark-grayish-blue);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+  position: absolute;
+}
+
+.advice__title {
+  display: flex;
+  color: var(--color-neon-green);
+}
+
+.advice__quote {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--color-light-cyan);
+  padding: 20px 45px;
+  text-align: center;
+}
+
+.advice__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80%;
+}
+
+.advice__button {
+  border-radius: 50px;
+  background-color: var(--color-neon-green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border: none;
+  position: relative;
+  top: 150px;
+  cursor: pointer;
+}
+
+.toasts {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.toast {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+  color: red;
+}
+
+.advice__button:hover {
+  box-shadow: 0 0 10px var(--color-neon-green);
+}
+
+.advice__divider--mobile {
+  display: none;
+}
+
+.attribution {
+  text-align: center;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .container__card {
+    width: 320px;
+    height: 350px;
+  }
+
+  .advice__button {
+    top: 175px;
+  }
+
+  .advice__quote {
+    padding: 20px 20px;
+    font-size: 22px;
+  }
+
+  .advice__divider--desktop {
+    display: none;
+  }
+
+  .advice__divider--mobile {
+    display: block;
+  }
+}
